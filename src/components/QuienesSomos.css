@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.custom-section {
+  background-color: #ee5555;
+  padding: 40px 0;
+}
+
+.custom-image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.custom-text-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-text-container {
+  padding: 100px;
+  color: white;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 4em; /* Tamaño grande */
+  color: white;
+  margin-bottom: 20px;
+}
+
+.custom-description {
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.custom-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.custom-card {
+    background-color: white;
+    border-radius: 5px; /* Reducir el radio para hacer las esquinas más suaves */
+    padding: 8px; /* Reducir el padding para hacer las tarjetas más delgadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reducir la sombra para un efecto más ligero */
+  }
+  
+  .custom-card-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 13px; /* Espacio más pequeño entre el título y el párrafo */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño para el título */
+  }
+  
+  .custom-card p {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 0.8em; /* Tamaño de fuente más pequeño para el párrafo */
+  }
+  
+
+
+.custom-button:hover {
+  background-color: #f1f1f1;
+}

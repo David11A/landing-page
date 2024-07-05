@@ -1,0 +1,90 @@
+.demo-logo-vertical {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .comments-section, .video-section, .brands-section {
+    padding: 8px 16px;
+  }
+  
+  
+  .comment, .brand {
+  
+    margin-bottom: 10px;
+  }
+  
+  .comment:last-child, .brand:last-child {
+    margin-bottom: 0;
+  }
+  
+  .comment {
+    margin-bottom: 10px;
+  }
+  
+  .comment:last-child {
+    margin-bottom: 0;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .brand:last-child {
+    margin-bottom: 0;
+  }
+  .Content{
+    background-color: blueviolet;
+  }
+  /* App.css */
+
+.content-container {
+  
+    justify-content: center;
+   
+  }
+  
+
+  .about-us-container {
+    padding: 20px;
+    background-color: #f0f2f500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .about-title {
+    margin-bottom: 16px;
+  }
+  
+  .about-description {
+    font-size: 16px;
+    max-width: 800px;
+    margin-bottom: 32px;
+  }
+  
+  .about-cards-container {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .about-card {
+    background-color: #ee5555;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .about-card .ant-card-head-title {
+    color: #fff;
+  }
+  
+  .about-card p {
+    font-size: 14px;
+    color: #fff;
+  }
+  

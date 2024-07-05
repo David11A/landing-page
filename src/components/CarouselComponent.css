@@ -1,0 +1,97 @@
+.carousel-container {
+  position: relative;
+  margin-top: 60px; 
+}
+
+.pc-banner, .mobile-banner {
+  display: none;
+}
+
+.carousel-content {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.carousel-title {
+  font-size: 48px; 
+  font-weight: bold; 
+  color: white; 
+}
+
+.carousel-description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.social-media-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-media-icons a {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2); 
+  border-radius: 50%;
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-media-icons a:hover {
+  background-color: white;
+  color: black;
+}
+
+.custom-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (min-width: 769px) {
+  .pc-banner {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-banner {
+    display: block;
+  }
+  .carousel-title {
+    font-size: 36px; 
+  }
+  .contact-button {
+    font-size: 16px; 
+  }
+}
