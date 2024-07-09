@@ -12,7 +12,7 @@ const ContactForm = () => {
             <Form.Item label="Nombre" name="name" rules={[{ required: true, message: 'Por favor ingresa tu nombre' }]}>
               <Input placeholder="Tu nombre" />
             </Form.Item>
-            <Form.Item label="Correo" name="email" rules={[{ required: true, message: 'Por favor ingresa tu correo' }]}>
+            <Form.Item  style={{color:"white"}} label="Correo" name="email" rules={[{ required: true, message: 'Por favor ingresa tu correo' }]}>
               <Input placeholder="Tu correo" />
             </Form.Item>
             <Form.Item label="Mensaje" name="message" rules={[{ required: true, message: 'Por favor ingresa tu mensaje' }]}>
@@ -20,7 +20,7 @@ const ContactForm = () => {
             </Form.Item>
             <Form.Item>
               <Button type="primary" htmlType="submit" className="contact-submit-button">
-                Enviar
+                <strong>Enviar</strong>
               </Button>
             </Form.Item>
             <div className="social-icons">

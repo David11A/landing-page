@@ -1,77 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.container {
+padding-bottom: 5%;
+margin-top: 25px;
+}
 
 .custom-section {
-  background-color: #ee5555;
-  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .custom-image-col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .custom-image {
   width: 100%;
-  max-width: 400px;
   height: auto;
+  border-radius: 10px;
 }
 
-.custom-text-col {
+.thumbnail-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.thumbnail.active {
+  border-color: #ff7f50;
 }
 
 .custom-text-container {
-  padding: 100px;
-  color: white;
+  padding: 20px;
 }
 
 .title {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 4em; /* Tamaño grande */
-  color: white;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
 .custom-description {
-  font-size: 1.2em;
-  color: white;
+  color: #ffffff;
+  font-size: 1rem;
   margin-bottom: 20px;
+}
+
+.custom-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.custom-button {
+  background: #353636;
+  border: 0px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.custom-button.active,
+.custom-button:hover {
+  background-color: #ec3b58;
+
 }
 
 .custom-cards-container {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 20px;
 }
 
 .custom-card {
-    background-color: white;
-    border-radius: 5px; /* Reducir el radio para hacer las esquinas más suaves */
-    padding: 8px; /* Reducir el padding para hacer las tarjetas más delgadas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reducir la sombra para un efecto más ligero */
-  }
-  
-  .custom-card-title {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 13px; /* Espacio más pequeño entre el título y el párrafo */
-    font-size: 0.9em; /* Tamaño de fuente más pequeño para el título */
-  }
-  
-  .custom-card p {
-    margin: 0;
-    padding: 0;
-    color: black;
-    font-size: 0.8em; /* Tamaño de fuente más pequeño para el párrafo */
-  }
-  
+  background-color: #ec3b58;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.custom-card-title {
+  color: #ff7f50;
+  font-size: 1.5rem;
+}
 
-.custom-button:hover {
-  background-color: #f1f1f1;
+.custom-card p {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 10px;
 }

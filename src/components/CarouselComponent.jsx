@@ -10,8 +10,8 @@ const CarouselComponent = () => {
           <div>
             <img src="/banner3.png" className="carousel-content" alt="PC Banner" />
             <div className="carousel-text">
-              <h1 className="carousel-title">DANIEL MOTORS</h1>
-              <p className="carousel-description">Cuidamos de tu moto. ¡Descubre nuestros servicios!</p>
+              <h1 className="carousel-title">TALLER DE MOTOS DANY</h1>
+              <p className="carousel-description">¡Confiarnos tu moto y dejarla en las mejores manos!!</p>
               <div className="social-media-icons">
                 <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
                   <img src="/tiktok-icon.png" alt="TikTok" className="custom-icon" />

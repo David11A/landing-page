@@ -38,13 +38,23 @@ const Menu1 = () => {
       <header className={`custom-header ${showHeader ? '' : 'header-hidden'}`}>
         <div className="logo">
           <img src="logo.png" alt="Logo" />
-          <span className="logo-text">DanielMotors</span>
+          <span className="logo-text">TALLER DE MOTOS DANY</span>
         </div>
         <nav className="menu-section">
           <ul className="desktop-menu">
             <li>
               <a href="#inicio" onClick={onClose}>
                 Inicio
+              </a>
+            </li>
+            <li>
+              <a href="#quienes-somos" onClick={onClose}>
+                Quiénes Somos
+              </a>
+            </li>
+            <li>
+              <a href="#inicio" onClick={onClose}>
+                Servicios
               </a>
             </li>
             <li className="submenu">
@@ -69,11 +79,7 @@ const Menu1 = () => {
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="#quienes-somos" onClick={onClose}>
-                Quiénes Somos
-              </a>
-            </li>
+           
             <li>
               <a href="#contacto" onClick={onClose}>
                 Contacto

@@ -50,28 +50,21 @@ const Sider1 = () => {
   return (
     <Layout>
       <Layout style={{ background: '#212429' }}>
-
-        <CarouselComponent />
-        <Content  style={{ color:"white" }}
-           >
-            
-          <CardServicios />
-          <div>
-            <h2 style={{ paddingLeft: "13px", paddingTop: "14px", marginBottom: '-1px' }}>DANIEL / Destacados  →  </h2>
-          </div>
+        <CarouselComponent /> 
+        <Content  style={{ color:"white" }} >          
+          <CardServicios />      
           <div style={{ marginBottom: '0px', paddingBottom: '0px', border: "0px" }}>
               <CardDestacados /></div>
           <div style={{ padding: '0px', marginTop: "-51px", color: "white" }}>
             <AccessoryCarousel />
             <div>
-              <h2 style={{  marginLeft:"10px" , paddingBottom: '0px' }}> DANIEL /Productos →</h2>
+              <h2 style={{  marginLeft:"10px" , paddingBottom: '0px' , fontSize:"30px"}}> PRODUCTOS →</h2>
             </div>
             <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
             <Promocion1 />
           </div>
 
-          <QuienesSomos />
-         
+          
 
         </Content>
         <div >

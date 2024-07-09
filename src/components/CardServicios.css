@@ -59,7 +59,7 @@
 
 .card-title {
   font-size: 19px; 
-  margin-bottom: 12px;
+  margin-bottom: 1px;
    font-weight:"bold"
 }
 
@@ -117,12 +117,12 @@
   display: flex;
   justify-content: center; 
   align-items: center;
-  padding: 10px 20px;
-  padding-bottom: 50px; 
+  padding: 40px 30px;
+  padding-bottom: 37px; 
 }
 
 .desktop-view2 a {
-  margin: 0 25px; 
+  margin: 0 55px; 
   display: flex;
   align-items: center;
 }
