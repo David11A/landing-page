@@ -17,32 +17,30 @@ export default function Footer1() {
             <Title level={4} style={{ color: 'white' }}>Enlaces Rápidos</Title>
             <Space direction="vertical">
               <Link href="/servicios" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Servicios</Link>
-              <Link href="/nosotros" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Nosotros</Link>
+              <Link href="/nosotros" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Quienes Somos</Link>
               <Link href="/contacto" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Contacto</Link>
-              <Link href="/blog" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Blog</Link>
             </Space>
           </Col>
           <Col xs={24} sm={12} md={6}>
             <Title level={4} style={{ color: 'white' }}>Contacto</Title>
             <Space direction="vertical">
-              <Text style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Teléfono: +34 123 456 789</Text>
-              <Text style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Email: info@tallerdemotos.com</Text>
+              <Text style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Teléfono: +504 0000 0000</Text>
+              <Text style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Email: correo@gmail.com</Text>
               <Text style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Dirección: Calle Falsa 123, Ciudad, País</Text>
             </Space>
           </Col>
           <Col xs={24} sm={12} md={6}>
             <Title level={4} style={{ color: 'white' }}>Síguenos</Title>
             <Space direction="vertical">
-              <Link href="https://www.facebook.com" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Facebook</Link>
-              <Link href="https://www.instagram.com" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Instagram</Link>
-              <Link href="https://www.twitter.com" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Twitter</Link>
-              <Link href="https://www.youtube.com" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>YouTube</Link>
+              <Link href="https://www.instagram.com" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>whatsapp</Link>
+              <Link href="https://www.twitter.com" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Instagram</Link>
+              <Link href="https://www.youtube.com" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Google</Link>
             </Space>
           </Col>
         </Row>
         <Row justify="center" style={{ marginTop: '20px' }}>
           <Text style={{ color: 'rgba(255, 255, 255, 0.65)' }}>
-            &copy; {new Date().getFullYear()} Taller de Motocicletas. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Taller de Motos Dany. Todos los derechos reservados.
           </Text>
         </Row>
       </Footer>

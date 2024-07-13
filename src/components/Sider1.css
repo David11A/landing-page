@@ -83,8 +83,53 @@
     color: #fff;
   }
   
-  .about-card p {
-    font-size: 14px;
-    color: #fff;
+  .custom-tabs {
+    background-color: #1f1f1f;
+    padding-top: 20px; /* Separación de las cards de arriba */
   }
   
+  .custom-tabs .ant-tabs-nav {
+    margin-bottom: 0 !important;
+  }
+  
+  .custom-tabs .ant-tabs-nav::before {
+    border-bottom: none !important;
+  }
+  
+  .custom-tabs .ant-tabs-tab {
+    background-color: transparent !important;
+    border: 1px solid #555555 !important; /* Borde gris claro */
+    border-radius: 20px !important;
+    margin: 10px !important;
+    padding: 5px 20px !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .custom-tabs .ant-tabs-tab-btn {
+    color: #999999 !important; /* Texto gris claro */
+    font-weight: 400 !important;
+    font-size: 14px !important;
+  }
+  
+  .custom-tabs .ant-tabs-tab:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* Fondo ligeramente claro al hover */
+    border-color: #777777 !important;
+  }
+  
+  .custom-tabs .ant-tabs-tab.ant-tabs-tab-active {
+    background-color: rgba(255, 255, 255, 0.15) !important; /* Fondo ligeramente más claro para el tab activo */
+    border-color: #999999 !important;
+  }
+  
+  .custom-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #ffffff !important; /* Texto blanco para el tab activo */
+  }
+  
+  .custom-tabs .ant-tabs-ink-bar {
+    background-color: transparent !important;
+  }
+  
+  .custom-tabs .ant-tabs-content-holder {
+    background-color: transparent !important;
+    padding: 20px 0 !important;
+  }

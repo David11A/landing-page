@@ -1,5 +1,4 @@
 .carousel-container {
-  
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -13,6 +12,7 @@
   scrollbar-width: none; 
   -ms-overflow-style: none;  
 }
+
 
 .carousel::-webkit-scrollbar {
   display: none; 
@@ -58,11 +58,14 @@
 }
 
 .card-title {
-  font-size: 19px; 
-  margin-bottom: 1px;
-   font-weight:"bold"
+  font-family: 'Teko', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.637);
 }
-
 .custom-button {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -72,6 +75,60 @@
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
+.marcas-carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 20px;
+  height: 50px; /* Ajusta la altura según sea necesario */
+}
+
+.marcas-track {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.track1 {
+  animation: scroll1 30s linear infinite;
+}
+
+.track2 {
+  animation: scroll2 30s linear infinite;
+}
+
+.marcas-track img {
+  width: 150px; /* Ajusta el tamaño de las imágenes según sea necesario */
+  margin-right: 10px;
+}
+
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .marcas-track img {
+    width: 100px; /* Ajusta el tamaño de las imágenes para dispositivos móviles */
+  }
+}
+
 
 .custom-button:hover {
   background-color: white;
@@ -143,6 +200,17 @@
     margin: 3px; 
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -33,58 +33,45 @@ const Menu1 = () => {
     };
   }, [lastScrollY]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (visible) {
+        onClose();
+      }
+    };
+
+    if (visible) {
+      window.addEventListener('scroll', handleScroll);
+    } else {
+      window.removeEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [visible]);
+
   return (
     <>
       <header className={`custom-header ${showHeader ? '' : 'header-hidden'}`}>
         <div className="logo">
           <img src="logo.png" alt="Logo" />
-          <span className="logo-text">TALLER DE MOTOS DANY</span>
+          <span className="logo-text">TALLER DE MOTO DANY</span>
         </div>
         <nav className="menu-section">
           <ul className="desktop-menu">
-            <li>
-              <a href="#inicio" onClick={onClose}>
-                Inicio
-              </a>
-            </li>
-            <li>
-              <a href="#quienes-somos" onClick={onClose}>
-                Quiénes Somos
-              </a>
-            </li>
-            <li>
-              <a href="#inicio" onClick={onClose}>
-                Servicios
-              </a>
-            </li>
+            <li><a href="#inicio" onClick={onClose}>Inicio</a></li>
+            <li><a href="#quienes-somos" onClick={onClose}>Quiénes Somos</a></li>
+            <li><a href="#servicios" onClick={onClose}>Servicios</a></li>
             <li className="submenu">
-              <a href="#productos">
-                Productos <DownOutlined />
-              </a>
+              <a href="#productos">Productos <DownOutlined /></a>
               <ul className="submenu-items">
-                <li>
-                  <a href="#destacados" onClick={onClose}>
-                    Destacados
-                  </a>
-                </li>
-                <li>
-                  <a href="#accesorios" onClick={onClose}>
-                    Accesorios
-                  </a>
-                </li>
-                <li>
-                  <a href="#productos" onClick={onClose}>
-                    Productos
-                  </a>
-                </li>
+                <li><a href="#destacados" onClick={onClose}>Destacados</a></li>
+                <li><a href="#accesorios" onClick={onClose}>Accesorios</a></li>
+                <li><a href="#productos" onClick={onClose}>Productos</a></li>
               </ul>
             </li>
-           
-            <li>
-              <a href="#contacto" onClick={onClose}>
-                Contacto
-              </a>
-            </li>
+            <li><a href="#contacto" onClick={onClose}>Contacto</a></li>
           </ul>
           <button className="menu-button" onClick={showDrawer}>
             <MenuOutlined />

@@ -22,6 +22,8 @@ margin-top: 25px;
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  margin-bottom: 28px;
+  
 }
 
 .thumbnail {
@@ -35,7 +37,7 @@ margin-top: 25px;
 }
 
 .thumbnail.active {
-  border-color: #ff7f50;
+  border-color: #ec3b58;
 }
 
 .custom-text-container {
@@ -50,7 +52,7 @@ margin-top: 25px;
 }
 
 .custom-description {
-  color: #ffffff;
+  color: #c7c7c7;
   font-size: 1rem;
   margin-bottom: 20px;
 }
@@ -69,11 +71,18 @@ margin-top: 25px;
   margin: 0 10px;
   cursor: pointer;
   border-radius: 5px;
+  font-family: 'Teko', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
 }
 
 .custom-button.active,
 .custom-button:hover {
   background-color: #ec3b58;
+  color: white;
 
 }
 
@@ -93,6 +102,9 @@ margin-top: 25px;
 .custom-card-title {
   color: #ff7f50;
   font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0%;
+  
 }
 
 .custom-card p {
@@ -100,3 +112,4 @@ margin-top: 25px;
   font-size: 1rem;
   margin-top: 10px;
 }
+

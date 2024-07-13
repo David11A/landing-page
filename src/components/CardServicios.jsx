@@ -42,7 +42,7 @@ const CardServicios = () => {
         <img className="card-image" src={service.imagencard} alt="Main Image" style={{ borderRadius: "25px" }} />
         <div className="card-content">
           <h1 className="card-title">{service.title}</h1>
-          <p className="card-description">{service.description}</p>
+          <p className="card-description">{ }</p>
         </div>
       </div>
     </div>
@@ -70,17 +70,93 @@ const CardServicios = () => {
 
   return (
     <Content style={{ padding: '0 20px' }}>
-      
-      <div className="desktop-view2">
-        <a href="#"><img src="/marca1.png" alt="Logo 1" /></a>
-        <a href="#"><img src="/marca2.png" alt="Logo 2" /></a>
-        <a href="#"><img src="/marca3.png" alt="Logo 3" /></a>
-        <a href="#"><img src="/marca4.png" alt="Logo 4" /></a>
-        <a href="#"><img src="/marca5.png" alt="Logo 5" /></a>
+      <div className="marcas-carousel">
+        <div className="marcas-track track1">
+          <img src="/marca1.png" alt="Marca 1" />
+          <img src="/marca2.png" alt="Marca 2" />
+          <img src="/marca3.png" alt="Marca 3" />
+          <img src="/marca4.png" alt="Marca 4" />
+          <img src="/marca5.png" alt="Marca 5" />
+          <img src="/marca1.png" alt="Marca 1" />
+          <img src="/marca2.png" alt="Marca 2" />
+          <img src="/marca3.png" alt="Marca 3" />
+          <img src="/marca4.png" alt="Marca 4" />
+          <img src="/marca5.png" alt="Marca 5" />
+        </div>
+        <div className="marcas-track track2">
+          <img src="/marca1.png" alt="Marca 1" />
+          <img src="/marca2.png" alt="Marca 2" />
+          <img src="/marca3.png" alt="Marca 3" />
+          <img src="/marca4.png" alt="Marca 4" />
+          <img src="/marca5.png" alt="Marca 5" />
+          <img src="/marca1.png" alt="Marca 1" />
+          <img src="/marca2.png" alt="Marca 2" />
+          <img src="/marca3.png" alt="Marca 3" />
+          <img src="/marca4.png" alt="Marca 4" />
+          <img src="/marca5.png" alt="Marca 5" />
+        </div>
       </div>
+
+
       <QuienesSomos />
-      <h2 style={{ margin: "0px", padding: '0px', color: "white" }}> SERVICIOS →</h2>
+      <div style={{
+          position: 'relative',
+          marginTop: "15px",
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}>
+
+          <div style={{
+            position: 'relative',
+       
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            {/* Flecha izquierda */}
+            <div style={{
+              position: 'absolute',
+              left: '0',
+              color: '#ff6666', // Rojo claro
+              fontSize: '24px',
+              transform: 'translateY(-50%)',
+              margin: '0 10px',
+            }}>
+              &#187;&#187; {/* Código HTML para doble flecha derecha */}
+            </div>
+
+            {/* Flecha derecha */}
+            <div style={{
+              position: 'absolute',
+              right: '0',
+              color: '#ff6666', // Rojo claro
+              fontSize: '24px',
+              transform: 'translateY(-50%) rotate(180deg)',
+              margin: '0 10px',
+            }}>
+              &#187;&#187; {/* Código HTML para doble flecha derecha, rotada 180 grados */}
+            </div>
+
+            <h2 style={{
+              fontSize: "48px",
+              fontWeight: "700",
+              fontFamily: "'Teko', sans-serif",
+              textTransform: "uppercase",
+              letterSpacing: "2px",
+              color: 'white',
+              textAlign: 'center',
+              margin: 0,
+              padding: '10px 40px', // Aumentar el padding para darle espacio a las flechas
+              textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+            }}>
+              servic<span style={{ color: '#ff3333' }}>ios</span>
+            </h2>
+          </div>
+
+        </div>
       <div className="desktop-view">
+
         <Row gutter={[16, 16]} justify="center">
           {services.map((service, index) => (
             <Col span={6} key={index}>
@@ -90,7 +166,7 @@ const CardServicios = () => {
         </Row>
       </div>
 
-      <div className="carousel-container mobile-view">
+      <div style={{ margin: "0px", padding: '0px', color: "white", border: "0px" }} className="carousel-container mobile-view">
         <div className="carousel" ref={slideRef}>
           {slides.map((slide, index) => (
             <div className="carousel-item" key={index}>
