@@ -33,7 +33,7 @@ const CarouselComponent = () => {
           <div>
             <img src="/bannerMobil.png" className="carousel-content" alt="Mobile Banner" />
             <div className="carousel-text">
-              <h1 className="carousel-title">DANIEL MOTORS</h1>
+              <h1 className="carousel-title">TALLER DE MOTOS DANY</h1>
               <p className="carousel-description">Cuidamos de tu moto. ¡Descubre nuestros servicios!</p>
               <div className="social-media-icons">
                 <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">

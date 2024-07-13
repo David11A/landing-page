@@ -73,7 +73,7 @@ const QuienesSomos = () => {
               padding: '10px 40px', // Aumentar el padding para darle espacio a las flechas
               textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
             }}>
-              Quienes so<span style={{ color: '#ff3333' }}>mos</span>
+              ¿Quienes so<span style={{ color: '#ff3333' }}>mos?</span>
             </h2>
           </div>
 
