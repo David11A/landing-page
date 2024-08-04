@@ -1,48 +1,65 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Col, Row, Image } from 'antd';
+import { Col, Row } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import './CardServicios.css';
-import QuienesSomos from './QuienesSomos';
+import { FaCoins, FaWrench } from 'react-icons/fa';
+import Paragraph from 'antd/es/typography/Paragraph';
 
 const CardServicios = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
-  const totalSlides = 4; // Número total de slides
+  const totalSlides = 4;
 
   const services = [
     {
       imagencard: "/imgMv2.png",
-      title: "Soldaduras",
-      description: "Nuestros técnicos están capacitados para realizar diagnósticos precisos y mantenimientos preventivos.",
-      images: ["/imgLarge1.png", "/imgSmall1_1.png", "/imgSmall1_2.png", "/imgSmall1_3.png"]
+      title: "Mantenimiento",
+      description: "Ofrecemos servicios completos de mantenimiento preventivo para mantener tu motocicleta en óptimas condiciones. Desde cambios de aceite hasta ajustes de frenos, nos aseguramos de que tu moto esté siempre lista para rodar.",
+      images: ["/imgLarge1.png", "/imgSmall1_1.png", "/imgSmall1_2.png", "/imgSmall1_3.png"],
+      prices: ["Desde L.495"]
     },
     {
       imagencard: "/imgMv3.png",
       title: "Restauraciones",
-      description: "Realizamos todo tipo de reparaciones y mejoras en tu motocicleta. Desde arreglos mecánicos hasta mejoras estéticas, contamos con las herramientas y el conocimiento necesarios para transformar tu moto.",
-      images: ["/imgLarge2.png", "/imgSmall2_1.png", "/imgSmall2_2.png", "/imgSmall2_3.png"]
+      description: "Especialistas en devolverle la vida a motocicletas clásicas o dañadas. Nuestro equipo realiza restauraciones detalladas para que tu moto recupere su brillo original y funcione como nueva.",
+      images: ["/imgLarge2.png", "/imgSmall2_1.png", "/imgSmall2_2.png", "/imgSmall2_3.png"],
+      prices: ["Precio varia por modelo"]
     },
     {
       imagencard: "/imgMv4.png",
-      title: "Enderezamiento",
-      description: "Tenemos una amplia variedad de repuestos para todo tipo de motocicletas. Garantizamos la calidad y durabilidad de cada pieza, y te asesoramos para que encuentres exactamente lo que necesitas.",
-      images: ["/imgLarge3.png", "/imgSmall3_1.png", "/imgSmall3_2.png", "/imgSmall3_3.png"]
+      title: "Diagnosticos",
+      description: "Identificamos con precisión cualquier problema mecánico o eléctrico en tu motocicleta utilizando herramientas de diagnóstico avanzadas, garantizando una reparación eficiente y efectiva.",
+      images: ["/imgLarge3.png", "/imgSmall3_1.png", "/imgSmall3_2.png", "/imgSmall3_3.png"],
+      prices: ["Desde L.199"]
     },
     {
       imagencard: "/imgMv5.png",
-      title: "Gomeria",
-      description: "Instalamos una gran variedad de equipos y accesorios en tu motocicleta. Desde sistemas de audio hasta dispositivos de navegación, nuestro equipo asegura una instalación profesional y segura.",
-      images: ["/moto2D.jpg", "/moto3D.jpg", "/moto2D.jpg", "/moto2D.jpg"]
+      title: "Sistema Electrico",
+      description: "Solucionamos problemas en el sistema eléctrico de tu moto, desde fallos en el encendido hasta problemas de iluminación, asegurando que cada componente funcione correctamente.",
+      images: ["/moto2D.jpg", "/moto3D.jpg", "/moto2D.jpg", "/moto2D.jpg"],
+      prices: ["Precio varia por falla"]
     }
   ];
+  
+  
 
   const CustomCard = ({ service }) => (
     <div className="custom-cardP">
       <div className="card-image-container">
-        <img className="card-image" src={service.imagencard} alt="Main Image" style={{ borderRadius: "25px" }} />
-        <div className="card-content">
-          <h1 className="card-title">{service.title}</h1>
-          <p className="card-description">{ }</p>
+        <img className="card-image" src={service.imagencard} alt="Main Image" />
+        <h1 className="card-title">{service.title}</h1>
+      </div>
+      <div className="card-details">
+        <div className="card-info">
+          <p className="descripcion-personalizada">
+           
+            {service.description}
+          </p>
+          <div className="card-prices">
+            {service.prices.map((price, index) => (
+              <span key={index} className="price-tag">{price}</span>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -69,94 +86,18 @@ const CardServicios = () => {
   }, []);
 
   return (
-    <Content style={{ padding: '0 20px' }}>
-      <div className="marcas-carousel">
-        <div className="marcas-track track1">
-          <img src="/marca1.png" alt="Marca 1" />
-          <img src="/marca2.png" alt="Marca 2" />
-          <img src="/marca3.png" alt="Marca 3" />
-          <img src="/marca4.png" alt="Marca 4" />
-          <img src="/marca5.png" alt="Marca 5" />
-          <img src="/marca1.png" alt="Marca 1" />
-          <img src="/marca2.png" alt="Marca 2" />
-          <img src="/marca3.png" alt="Marca 3" />
-          <img src="/marca4.png" alt="Marca 4" />
-          <img src="/marca5.png" alt="Marca 5" />
-        </div>
-        <div className="marcas-track track2">
-          <img src="/marca1.png" alt="Marca 1" />
-          <img src="/marca2.png" alt="Marca 2" />
-          <img src="/marca3.png" alt="Marca 3" />
-          <img src="/marca4.png" alt="Marca 4" />
-          <img src="/marca5.png" alt="Marca 5" />
-          <img src="/marca1.png" alt="Marca 1" />
-          <img src="/marca2.png" alt="Marca 2" />
-          <img src="/marca3.png" alt="Marca 3" />
-          <img src="/marca4.png" alt="Marca 4" />
-          <img src="/marca5.png" alt="Marca 5" />
+    
+    <Content className="seccion-personalizada">
+      <div className="contenedor-titulo" style={{ marginBottom: "60px" }}>
+        <div className="contenedor-flechas">
+          <div className="flecha-izquierda">&#187;</div>
+          <div className="flecha-derecha">&#187;</div>
+          <h2 className="titulo-principal">
+            Servic<span className="texto-destacado">ios</span>
+          </h2>
         </div>
       </div>
-
-
-      <QuienesSomos />
-      <div style={{
-          position: 'relative',
-          marginTop: "15px",
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}>
-
-          <div style={{
-            position: 'relative',
-       
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            {/* Flecha izquierda */}
-            <div style={{
-              position: 'absolute',
-              left: '0',
-              color: '#ff6666', // Rojo claro
-              fontSize: '24px',
-              transform: 'translateY(-50%)',
-              margin: '0 10px',
-            }}>
-              &#187;&#187; {/* Código HTML para doble flecha derecha */}
-            </div>
-
-            {/* Flecha derecha */}
-            <div style={{
-              position: 'absolute',
-              right: '0',
-              color: '#ff6666', // Rojo claro
-              fontSize: '24px',
-              transform: 'translateY(-50%) rotate(180deg)',
-              margin: '0 10px',
-            }}>
-              &#187;&#187; {/* Código HTML para doble flecha derecha, rotada 180 grados */}
-            </div>
-
-            <h2 style={{
-              fontSize: "48px",
-              fontWeight: "700",
-              fontFamily: "'Teko', sans-serif",
-              textTransform: "uppercase",
-              letterSpacing: "2px",
-              color: 'white',
-              textAlign: 'center',
-              margin: 0,
-              padding: '10px 40px', // Aumentar el padding para darle espacio a las flechas
-              textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
-            }}>
-              servic<span style={{ color: '#ff3333' }}>ios</span>
-            </h2>
-          </div>
-
-        </div>
       <div className="desktop-view">
-
         <Row gutter={[16, 16]} justify="center">
           {services.map((service, index) => (
             <Col span={6} key={index}>
@@ -165,8 +106,7 @@ const CardServicios = () => {
           ))}
         </Row>
       </div>
-
-      <div style={{ margin: "0px", padding: '0px', color: "white", border: "0px" }} className="carousel-container mobile-view">
+      <div className="carousel-container mobile-view">
         <div className="carousel" ref={slideRef}>
           {slides.map((slide, index) => (
             <div className="carousel-item" key={index}>

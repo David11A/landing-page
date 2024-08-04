@@ -1,6 +1,9 @@
 /* Estilos generales */
+.seccion-personalizada {
+  padding: 20px;
+}
+
 .contenedor-formulario-contacto {
-  padding: 40px 0;
   color: #ffffff;
 }
 
@@ -22,7 +25,7 @@
 .flecha-izquierda, .flecha-derecha {
   position: absolute;
   color: #ff6666;
-  font-size: 24px;
+  font-size: 1.5rem; /* Usar rem en lugar de px */
   transform: translateY(-50%);
   margin: 0 10px;
 }
@@ -37,7 +40,7 @@
 }
 
 .titulo-contacto {
-  font-size: 48px;
+  font-size: 2.5rem; /* Usar rem en lugar de px */
   font-weight: 700;
   font-family: 'Teko', sans-serif;
   text-transform: uppercase;
@@ -55,14 +58,14 @@
 
 /* Sección de información de contacto */
 .contact-icon {
-  font-size: 24px;
+  font-size: 1.5rem; /* Usar rem en lugar de px */
   color: #ff4655;
   margin-right: 10px;
 }
 
 .contact-label {
   font-family: 'Teko', sans-serif !important;
-  font-size: 20px !important;
+  font-size: 1.25rem !important; /* Usar rem en lugar de px */
   font-weight: 700 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -71,7 +74,7 @@
 
 .contact-text {
   font-family: 'Roboto', sans-serif !important;
-  font-size: 16px !important;
+  font-size: 1rem !important; /* Usar rem en lugar de px */
   line-height: 1.6;
   color: #F4F4F4 !important;
 }
@@ -80,7 +83,7 @@
 .etiqueta-redes-sociales {
   margin-top: 30px;
   font-family: 'Teko', sans-serif !important;
-  font-size: 20px !important;
+  font-size: 1.25rem !important; /* Usar rem en lugar de px */
   font-weight: 700 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -88,7 +91,7 @@
 }
 
 .social-icon {
-  font-size: 28px;
+  font-size: 1.75rem; /* Usar rem en lugar de px */
   color: #ff4655;
   margin-right: 20px;
   cursor: pointer;
@@ -101,8 +104,17 @@
 
 /* Sección de mapa */
 .contenedor-mapa {
-  height: 350px;
-  width: 100%;
+  height: 450px;
+  padding: 0%;
+  width: 105%; /* Ancho en versión de escritorio */
   overflow: hidden;
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .contenedor-mapa {
+    padding: 0%;
+    width: 100%; /* Ancho en versión móvil */
+    height: 300px; /* Ajusta la altura para pantallas pequeñas si es necesario */
+  }
 }

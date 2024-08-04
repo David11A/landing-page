@@ -5,15 +5,23 @@ import './CarouselComponent.css';
 const CarouselComponent = () => {
   return (
     <>
- 
-  <div className="pc-banner">
-    <Carousel className="custom-carousel">
-      <div>
-        <img src="/banner.png" className="carousel-content" alt="PC Banner" />
-        <div className="carousel-text">
-          <h1 className="carousel-title">TALLER DE MOTOS DANY</h1>
-          <p className="carousel-description">¡Confiarnos tu moto y dejarla en las mejores manos!</p>
-          <div className="social-media-icons">
+      {/* Sección del banner para PC */}
+      <div className="pc-banner">
+        <Carousel className="custom-carousel">
+          <div>
+            <img src="/banner.png" className="carousel-content" alt="PC Banner" />
+            <div className="carousel-text">
+              {/* Título principal */}
+              <h1 className="carousel-title">TALLER DE MOTOS</h1>
+              {/* Subtítulo */}
+              <h2 className="carousel-subtitle">DANY</h2>
+              {/* Descripción */}
+              <p className="carousel-description">Mantenimiento | Restauraciones | Enderezamiento</p>
+             
+
+               {/* Sección de redes sociales */}
+              <div className="social-media-icons">
+                
                 <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
                   <GoogleOutlined className="custom-icon" />
                 </a>
@@ -26,15 +34,24 @@ const CarouselComponent = () => {
               </div>
             </div>
           </div>
+          
         </Carousel>
+        
       </div>
+
+      {/* Sección del banner para móvil */}
       <div className="mobile-banner">
         <Carousel className="custom-carousel">
           <div>
             <img src="/bannerMobil.png" className="carousel-content" alt="Mobile Banner" />
             <div className="carousel-text">
-              <h1 className="carousel-title">TALLER DE MOTOS DANY</h1>
-              <p className="carousel-description">Cuidamos de tu moto. ¡Descubre nuestros servicios!</p>
+              {/* Título principal */}
+              <h1 className="carousel-title">TALLER DE MOTOS</h1>
+              {/* Subtítulo */}
+              <h2 className="carousel-subtitle">DANY</h2>
+              {/* Descripción */}
+              <p className="carousel-description">◎Mantenimiento ◎Restauraciones ◎Enderezamiento</p>
+              {/* Sección de redes sociales */}
               <div className="social-media-icons">
                 <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
                   <GoogleOutlined className="custom-icon" />
@@ -50,7 +67,6 @@ const CarouselComponent = () => {
           </div>
         </Carousel>
       </div>
- 
     </>
   );
 };

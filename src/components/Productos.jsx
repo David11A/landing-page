@@ -1,225 +1,73 @@
 import React, { useState } from 'react';
-import { Carousel, Button } from 'antd';
-import { AppstoreOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import './Productos.css';
-import CardDestacados from './CardDestacados';
 
-function Productos() {
-  const [viewMode, setViewMode] = useState('carousel');
+const proyectosData = [
+  {
+    id: 1,
+    title: "Mantenimiento Preventivo",
+    description: "Proyecto enfocado en el mantenimiento preventivo de motocicletas, asegurando un óptimo funcionamiento y alargando la vida útil del vehículo.",
+    image: "/proyecto1.png"
+  },
+  {
+    id: 2,
+    title: "Reparación de Motor",
+    description: "Especialistas en la reparación y ajuste de motores, garantizando un rendimiento mejorado y una experiencia de conducción más suave.",
+    image: "/imgQ4.png"
+  },
+  {
+    id: 3,
+    title: "Pintura y Estética",
+    description: "Proyecto de personalización de motocicletas con servicios de pintura y estética, creando diseños únicos y llamativos.",
+    image: "/pintura.png"
+  },
+  {
+    id: 4,
+    title: "Accesorios y Equipamiento",
+    description: "Instalación de accesorios y equipamiento para motocicletas, mejorando la funcionalidad y el estilo del vehículo.",
+    image: "/accesorios.png"
+  }
+];
 
-  const products = [
-    {
-      id: 1,
-      image: '../producto.png',
-      title: 'Aceite para motor',
-      author: 'Taller MotoCare',
-      viewers: '1000 unidades disponibles',
-      likes: '500 recomendaciones',
-      tags: ['Lubricante', 'Mantenimiento'],
-    },
-    {
-      id: 2,
-      image: '../producto.png',
-      title: 'Reemplazo de neumáticos',
-      author: 'Taller MotoCare',
-      viewers: '800 unidades disponibles',
-      likes: '450 recomendaciones',
-      tags: ['Reparación', 'Servicio'],
-    },
-    {
-      id: 3,
-      image: '../producto.png',
-      title: 'Inspección de frenos',
-      author: 'Taller MotoCare',
-      viewers: '600 unidades disponibles',
-      likes: '400 recomendaciones',
-      tags: ['Inspección', 'Seguridad'],
-    },
-    {
-      id: 4,
-      image: '../producto.png',
-      title: 'Ajuste del motor',
-      author: 'Taller MotoCare',
-      viewers: '500 unidades disponibles',
-      likes: '350 recomendaciones',
-      tags: ['Rendimiento', 'Ajuste'],
-    },
-    {
-      id: 5,
-      image: '../producto.png',
-      title: 'Lubricación de cadena',
-      author: 'Taller MotoCare',
-      viewers: '700 unidades disponibles',
-      likes: '300 recomendaciones',
-      tags: ['Lubricante', 'Cadena'],
-    },
-  ];
+function Proyectos() {
+  const [selectedProyecto, setSelectedProyecto] = useState(proyectosData[0]);
 
   return (
-    <div>
-      {/* Versión de escritorio */}
 
-      <div className="productos-container1 desktop" >
-
-      <div style={{
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'flex-start',
-  marginBottom: '20px',
-
-  position: 'relative',
-  width: '100%'
-}}>
-  <h2 style={{
-    margin: "0px",
-    paddingLeft: '20px',
-    color: "white",
-    border: "0px",
-    fontSize: "28px",
-    fontWeight: "700",
-    fontFamily: "'Teko', sans-serif",
-    textTransform: "uppercase",
-    letterSpacing: "2px",
-    textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
-  }}>
-    Todos los prod<span style={{ color: '#ff0000' }}>uctos</span>
-  </h2>
-  <div style={{
-    position: 'absolute',
-    bottom: '-10px',
-    left: '20px',
-    width: '200px',
-    height: '2px',
-    background: `
-      linear-gradient(to right, 
-        red 0%, red 80%, 
-        transparent 80%, transparent 90%,
-        red 90%, red 100%)
-    `,
-  }}></div>
-</div>
-        <div className="productos-cards1">
-          {products.map((product) => (
-            <div className="card1" key={product.id}>
-              <div className="card-image1">
-                <img src={product.image} alt={product.title} />
-                <div className="play-button1"></div>
-              </div>
-              <div className="card-content1">
-                <h3>{product.title}</h3>
-                <p>{product.author}</p>
-                <p>{product.viewers}</p>
-                <p>{product.likes}</p>
-                <div className="tags1">
-                  {product.tags.map((tag, index) => (
-                    <span key={index} className="tag1">{tag}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
+      <div className="proyectos">
+            <div className="seccion-personalizada">
+        <div className="contenedor-titulo">
+          <div className="contenedor-flechas" style={{marginBottom:"80px"}}>
+            <div className="flecha-izquierda">&#187;</div>
+            <div className="flecha-derecha">&#187;</div>
+            <h2 className="titulo-principal">
+              Nuestros trab<span className="texto-destacado">ajos</span>
+            </h2>
+          </div>
         </div>
-      </div>
-
-      {/* Versión móvil */}
-      <div className="productos-container1 mobile">
-      <div style={{
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'flex-start',
-  marginBottom: '20px',
-  position: 'relative',
-  width: '100%'
-}}>
-  <h2 style={{
-    margin: "0px",
-    paddingLeft: '0px',
-    color: "white",
-    border: "0px",
-    fontSize: "28px",
-    fontWeight: "700",
-    fontFamily: "'Teko', sans-serif",
-    textTransform: "uppercase",
-    letterSpacing: "2px",
-    textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
-  }}>
-    Todos los prod<span style={{ color: '#ff0000' }}>uctos</span>
-  </h2>
-  <div style={{
-    position: 'absolute',
-    bottom: '-10px',
-    left: '20px',
-    width: '200px',
-    height: '2px',
-    background: `
-      linear-gradient(to right, 
-        red 0%, red 80%, 
-        transparent 80%, transparent 90%,
-        red 90%, red 100%)
-    `,
-   
-  }}></div>
-</div>
-        <div className="view-buttons">
-          <Button
-            type="primary"
-            icon={<AppstoreOutlined />}
-            onClick={() => setViewMode('carousel')}
-          />
-          <Button
-            type="primary"
-            icon={<UnorderedListOutlined />}
-            onClick={() => setViewMode('list')}
-          />
-        </div>
-        {viewMode === 'carousel' ? (
-          <Carousel className="productos-cards1">
-            {products.map((product) => (
-              <div className="card1" key={product.id}>
-                <div className="card-image1">
-                  <img src={product.image} alt={product.title} />
-                  <div className="play-button1"></div>
-                </div>
-                <div className="card-content1">
-                  <h3>{product.title}</h3>
-                  <p>{product.author}</p>
-                  <p>{product.viewers}</p>
-                  <p>{product.likes}</p>
-                  <div className="tags1">
-                    {product.tags.map((tag, index) => (
-                      <span key={index} className="tag1">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Carousel>
-        ) : (
-          <div className="productos-cards1">
-            {products.map((product) => (
-              <div className="card1" key={product.id}>
-                <div className="card-image1">
-                  <img src={product.image} alt={product.title} />
-                  <div className="play-button1"></div>
-                </div>
-                <div className="card-content1">
-                  <h3>{product.title}</h3>
-                  <p>{product.author}</p>
-                  <p>{product.viewers}</p>
-                  <p>{product.likes}</p>
-                  <div className="tags1">
-                    {product.tags.map((tag, index) => (
-                      <span key={index} className="tag1">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
+        <div className="proyectos-grid">
+          <div className="proyectos-main-image">
+            <img src={selectedProyecto.image} alt={selectedProyecto.title} />
+          </div>
+          <div className="proyectos-info">
+            <h2>{selectedProyecto.title}</h2>
+            <p className="descripcion-personalizada">{selectedProyecto.description}</p>
+            
+          </div>
+          <div className="proyectos-thumbnails">
+            {proyectosData.map(proyecto => (
+              <img
+                key={proyecto.id}
+                src={proyecto.image}
+                alt={proyecto.title}
+                className={`thumbnail ${selectedProyecto.id === proyecto.id ? 'active' : ''}`}
+                onClick={() => setSelectedProyecto(proyecto)}
+              />
             ))}
           </div>
-        )}
+        </div>
       </div>
     </div>
   );
 }
 
-export default Productos;
+export default Proyectos;

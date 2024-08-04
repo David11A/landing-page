@@ -8,7 +8,6 @@ function Home() {
     <>
       <Menu1 />
       <Sider1 />
-
       <Footer1 />
     </>
 

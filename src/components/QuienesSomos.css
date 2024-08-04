@@ -1,32 +1,33 @@
-.container {
-padding-bottom: 5%;
-margin-top: 25px;
+/* Estilos generales */
+.contenedor {
+  padding-bottom: 5%;
+  background-color: #1a1a1a;
 }
 
-.custom-section {
+.seccion-personalizada {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.custom-image-col {
+/* Estilos de la columna de imagen */
+.columna-imagen-personalizada {
   text-align: center;
 }
 
-.custom-image {
+.imagen-personalizada {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-.thumbnail-container {
+.contenedor-miniaturas {
   display: flex;
   justify-content: center;
   margin-top: 10px;
   margin-bottom: 28px;
-  
 }
 
-.thumbnail {
+.miniatura {
   width: 60px;
   height: 40px;
   object-fit: cover;
@@ -36,34 +37,81 @@ margin-top: 25px;
   border-radius: 5px;
 }
 
-.thumbnail.active {
+.miniatura.activa {
   border-color: #ec3b58;
 }
 
-.custom-text-container {
+/* Estilos del contenedor de texto */
+.contenedor-texto-personalizado {
   padding: 20px;
 }
 
-.title {
-  color: #ffffff;
+/* Estilos del título principal */
+.contenedor-titulo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-flechas {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flecha-izquierda,
+.flecha-derecha {
+  position: absolute;
+  color: #ff6666;
+  font-size: 24px;
+  transform: translateY(-50%);
+  margin: 0 10px;
+}
+
+.flecha-izquierda {
+  left: 0;
+}
+
+.flecha-derecha {
+  right: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.titulo-principal {
+  font-size: 48px;
+  font-weight: 700;
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
   text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin: 0;
+  padding: 10px 40px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
-.custom-description {
-  color: #c7c7c7;
-  font-size: 1rem;
-  margin-bottom: 20px;
+.texto-destacado {
+  color: #ff3333;
 }
 
-.custom-buttons-container {
+/* Estilos de la descripción */
+.descripcion-personalizada {
+  color: #F4F4F4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Estilos de los botones */
+.contenedor-botones-personalizado {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.custom-button {
+.boton-personalizado {
   background: #353636;
   border: 0px solid #ffffff;
   color: #ffffff;
@@ -72,44 +120,108 @@ margin-top: 25px;
   cursor: pointer;
   border-radius: 5px;
   font-family: 'Teko', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  
 }
 
-.custom-button.active,
-.custom-button:hover {
+.boton-personalizado.activo,
+.boton-personalizado:hover {
   background-color: #ec3b58;
   color: white;
-
 }
 
-.custom-cards-container {
+/* Estilos de las tarjetas */
+.contenedor-tarjetas-personalizado {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.custom-card {
+.tarjeta-personalizada {
   background-color: #ec3b58;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.custom-card-title {
-  color: #ff7f50;
-  font-size: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0%;
+.titulo-tarjeta-personalizada {
+  color: rgb(255, 255, 255);
+  font-family: 'Teko', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.parrafo-tarjeta-personalizada {
+  color: #F4F4F4;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  margin-bottom: 0;
+}
+.marcas-carousel {
+  overflow: hidden;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 8px 0;
+  margin-bottom: 60px;
+}
+
+.marcas-track {
+  display: flex;
+  width: 200%;
+  animation: scroll 40s linear infinite;
+}
+
+.marcas-slide {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.marcas-slide img {
+  height: 50px;
+  object-fit: contain;
+  max-width: 18%; /* Ajusta este valor según sea necesario */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marcas-track {
+    animation: scroll 20s linear infinite;
+  }
+  .marcas-carousel {
+
+    margin-bottom: 10px;
+  }
+  .titulo-principal {
+    font-size: 37px;
+  }
   
+  .marcas-slide img {
+    height: 30px;
+    max-width: 15%; /* Reduce el ancho máximo en móviles */
+  }
 }
 
-.custom-card p {
-  color: #ffffff;
-  font-size: 1rem;
-  margin-top: 10px;
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .marcas-slide img {
+    max-width: 20%; /* Ajusta según sea necesario */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+  }
 }
-

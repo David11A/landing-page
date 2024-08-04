@@ -4,121 +4,119 @@ import './Menu1.css';
 
 const Menu1 = () => {
   const [visible, setVisible] = useState(false);
-  const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const [mostrarEncabezado, setMostrarEncabezado] = useState(true);
+  const [ultimoScrollY, setUltimoScrollY] = useState(0);
 
-  const showDrawer = () => {
+  const mostrarCajon = () => {
     setVisible(true);
   };
 
-  const onClose = () => {
+  const cerrarCajon = () => {
     setVisible(false);
   };
 
-  const controlHeader = () => {
-    if (window.scrollY > lastScrollY) {
-      // scroll down
-      setShowHeader(false);
+  const controlarEncabezado = () => {
+    if (window.scrollY > ultimoScrollY) {
+      // desplazamiento hacia abajo
+      setMostrarEncabezado(false);
     } else {
-      // scroll up
-      setShowHeader(true);
+      // desplazamiento hacia arriba
+      setMostrarEncabezado(true);
     }
-    setLastScrollY(window.scrollY);
+    setUltimoScrollY(window.scrollY);
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', controlHeader);
+    window.addEventListener('scroll', controlarEncabezado);
     return () => {
-      window.removeEventListener('scroll', controlHeader);
+      window.removeEventListener('scroll', controlarEncabezado);
     };
-  }, [lastScrollY]);
+  }, [ultimoScrollY]);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const manejarDesplazamiento = () => {
       if (visible) {
-        onClose();
+        cerrarCajon();
       }
     };
 
     if (visible) {
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', manejarDesplazamiento);
     } else {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', manejarDesplazamiento);
     }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', manejarDesplazamiento);
     };
   }, [visible]);
 
   return (
     <>
-      <header className={`custom-header ${showHeader ? '' : 'header-hidden'}`}>
+      {/* Sección del encabezado */}
+      <header className={`encabezado-personalizado ${mostrarEncabezado ? '' : 'encabezado-oculto'}`}>
+        {/* Sección del logo */}
         <div className="logo">
           <img src="logo.png" alt="Logo" />
-          <span className="logo-text">TALLER DE MOTO DANY</span>
+          <span className="texto-logo">TALLER DE MOTO DANY</span>
         </div>
-        <nav className="menu-section">
-          <ul className="desktop-menu">
-            <li><a href="#inicio" onClick={onClose}>Inicio</a></li>
-            <li><a href="#quienes-somos" onClick={onClose}>Quiénes Somos</a></li>
-            <li><a href="#servicios" onClick={onClose}>Servicios</a></li>
+        {/* Sección del menú */}
+        <nav className="seccion-menu">
+          <ul className="menu-escritorio">
+            <li><a href="#inicio" onClick={cerrarCajon}>Inicio</a></li>
+            <li><a href="#quienes-somos" onClick={cerrarCajon}>Quiénes Somos</a></li>
+            <li><a href="#servicios" onClick={cerrarCajon}>Servicios</a></li>
             <li className="submenu">
-              <a href="#productos">Productos <DownOutlined /></a>
-              <ul className="submenu-items">
-                <li><a href="#destacados" onClick={onClose}>Destacados</a></li>
-                <li><a href="#accesorios" onClick={onClose}>Accesorios</a></li>
-                <li><a href="#productos" onClick={onClose}>Productos</a></li>
+              <a href="#proyectos">Proyectos</a>
+              <ul className="elementos-submenu">
+                <li><a href="#destacados" onClick={cerrarCajon}>Destacados</a></li>
+                <li><a href="#accesorios" onClick={cerrarCajon}>Accesorios</a></li>
               </ul>
             </li>
-            <li><a href="#contacto" onClick={onClose}>Contacto</a></li>
+            <li><a href="#contacto" onClick={cerrarCajon}>Contacto</a></li>
           </ul>
-          <button className="menu-button" onClick={showDrawer}>
+          <button className="boton-menu" onClick={mostrarCajon}>
             <MenuOutlined />
           </button>
         </nav>
+        {/* Sección del cajón */}
         {visible && (
-          <div className="drawer">
-            <div className="drawer-header">
-              <button className="close-button" onClick={onClose}>
+          <div className="cajon">
+            <div className="cabecera-cajon">
+              <button className="boton-cerrar" onClick={cerrarCajon}>
                 ×
               </button>
             </div>
-            <ul className="drawer-menu">
+            <ul className="menu-cajon">
               <li>
-                <a href="#inicio" onClick={onClose}>
+                <a href="#inicio" onClick={cerrarCajon}>
                   Inicio
                 </a>
               </li>
               <li className="submenu">
-                <a href="#productos" onClick={onClose}>
-                  Productos
+                <a href="#proyectos" onClick={cerrarCajon}>
+                  Proyectos
                 </a>
-                <ul className="submenu-items">
+                <ul className="elementos-submenu">
                   <li>
-                    <a href="#destacados" onClick={onClose}>
+                    <a href="#destacados" onClick={cerrarCajon}>
                       Destacados
                     </a>
                   </li>
                   <li>
-                    <a href="#accesorios" onClick={onClose}>
+                    <a href="#accesorios" onClick={cerrarCajon}>
                       Accesorios
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#productos" onClick={onClose}>
-                      Productos
                     </a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#quienes-somos" onClick={onClose}>
+                <a href="#quienes-somos" onClick={cerrarCajon}>
                   Quiénes Somos
                 </a>
               </li>
               <li>
-                <a href="#contacto" onClick={onClose}>
+                <a href="#contacto" onClick={cerrarCajon}>
                   Contacto
                 </a>
               </li>

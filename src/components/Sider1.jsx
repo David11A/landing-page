@@ -15,11 +15,11 @@ import QuienesSomos from './QuienesSomos';
 const { Content } = Layout;
 const { Text, Title, Paragraph } = Typography;
 
-const CustomTabs = ({ items, ...props }) => (
+const PestanasPersonalizadas = ({ items, ...props }) => (
   <AntTabs 
     {...props}
     items={items}
-    className="custom-tabs"
+    className="pestanas-personalizadas"
   />
 );
 
@@ -36,12 +36,12 @@ const items = [
   {
     key: '2',
     label: 'Llantas',
-    children: 'Content of Tab Pane 2',
+    children: 'Contenido de la pestaña 2',
   },
   {
     key: '3',
     label: 'Escapes',
-    children: 'Content of Tab Pane 3',
+    children: 'Contenido de la pestaña 3',
   },
 ];
 
@@ -50,17 +50,20 @@ const Sider1 = () => {
 
   return (
     <Layout>
-      <Layout style={{ background: '#212429' }}>
+      <Layout className="diseno-fondo">
         <CarouselComponent />
-        <Content style={{ color: "white" }} >
-          <CardServicios />  
+        <Content className="contenido-principal">
+        <QuienesSomos />
+         <CardServicios /> 
+       
           <div>
-            <CardDestacados />
-            <CustomTabs  defaultActiveKey="1" items={items} onChange={onChange} />       
-            <div style={{ marginBottom: '0px', paddingBottom: '0px', border: "0px" }}>
+
+           
+
+            <Productos />       
+            <div className="contenedor-sin-margen">
             </div>      
           </div>
-        
         </Content>
         <div>
           <ContactForm />

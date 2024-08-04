@@ -1,104 +1,137 @@
+/* Contenedor principal del carrusel */
 .carousel-container {
   position: relative;
-  margin-top: 180px; /* Aumentado para dar más espacio a la barra de navegación */
+  margin-top: 180px;
 }
 
+/* Estilos para los banners de PC y móvil */
 .pc-banner, .mobile-banner {
   display: none;
 }
 
+/* Estilos para el contenido del carrusel */
 .carousel-content {
   width: 100%;
   height: auto;
-  max-height: calc(100vh - 80px); /* Ajustado para considerar la barra de navegación */
+  max-height: calc(100vh - 80px);
   object-fit: cover;
 }
 
+/* Estilos para el texto del carrusel */
 .carousel-text {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 2%;
+  transform: translate(0, -50%);
   color: white;
-  text-align: center;
-  width: 90%;
+  text-align: left;
+  width: 50%;
   max-width: 600px;
-  padding: 20px; /* Añadido para dar espacio alrededor del contenido */
+  padding: 10px;
 }
 
+/* Estilos para el título del carrusel */
 .carousel-title {
-  font-family: 'Teko', sans-serif;
-  font-size: 3.5vw; /* Reducido ligeramente */
+  font-family: 'Arial', sans-serif;
+  font-size: 4vw;
   font-weight: 700;
+  color: white;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
+/* Estilos para el subtítulo del carrusel */
+.carousel-subtitle {
+  font-family: 'Arial', sans-serif;
+  font-size: 11vw;
+  font-weight: 900;
+  color: rgb(233, 19, 19);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Estilos para la descripción del carrusel */
 .carousel-description {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.8vw; /* Reducido ligeramente */
-  font-weight: 500;
-  line-height: 1.4;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  font-family: 'Arial', sans-serif;
+  font-size: 1.8vw;
+  color: white;
+  margin-top: 5px;
   margin-bottom: 20px;
 }
 
+/* Estilos para los iconos de redes sociales */
 .social-media-icons {
   display: flex;
-  justify-content: center;
-  gap: 15px; /* Reducido para ahorrar espacio vertical */
-  flex-wrap: wrap;
+  margin-left: 25%;
+  gap: 15px;
 }
 
 .social-media-icons a {
-  color: white;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  width: 8vw; /* Reducido */
-  height: 8vw; /* Reducido */
-  max-width: 50px; /* Reducido */
-  max-height: 50px; /* Reducido */
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s, color 0.3s;
+  transition: all 0.3s ease;
+}
+
+.social-media-icons a:hover {
+  background-color: white;
 }
 
 .custom-icon {
-  font-size: 3.5vw; /* Reducido */
-  max-font-size: 30px; /* Reducido */
+  font-size: 34px;
   color: white;
   transition: all 0.3s ease;
 }
 
+.social-media-icons a:hover .custom-icon {
+  color: #e60707;
+}
+
+/* Media queries para responsividad */
 @media (min-width: 769px) {
   .pc-banner {
     display: block;
   }
+
 }
 
 @media (max-width: 768px) {
   .mobile-banner {
     display: block;
   }
+  .social-media-icons  {
+    margin-left: 0%;
+  }
+
   
   .carousel-title {
     font-size: 6vw;
+  }
+  
+  .carousel-subtitle {
+    font-size: 11vw;
   }
   
   .carousel-description {
     font-size: 3.5vw;
   }
   
-  .custom-icon {
-    font-size: 5vw;
+  .social-media-icons a {
+    width: 40px;
+    height: 40px;
+
   }
   
-  .social-media-icons a {
-    width: 10vw;
-    height: 10vw;
+  .custom-icon {
+    font-size: 20px;
   }
 }
 
@@ -107,19 +140,36 @@
     font-size: 7vw;
   }
   
+  .carousel-subtitle {
+    font-size: 11vw;
+  }
+  
   .carousel-description {
-    font-size: 4.5vw;
+    font-size: 4vw;
+  }
+  
+  .social-media-icons a {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .custom-icon {
+    font-size: 18px;
   }
 }
 
 /* Ajuste específico para pantallas medianas */
 @media (min-width: 769px) and (max-width: 1024px) {
   .carousel-container {
-    margin-top: 100px; /* Más espacio para la barra de navegación en tablets */
+    margin-top: 100px;
   }
   
   .carousel-title {
-    font-size: 4.5vw;
+    font-size: 5vw;
+  }
+  
+  .carousel-subtitle {
+    font-size: 11vw;
   }
   
   .carousel-description {
@@ -127,11 +177,11 @@
   }
   
   .social-media-icons a {
-    width: 7vw;
-    height: 7vw;
+    width: 45px;
+    height: 45px;
   }
   
   .custom-icon {
-    font-size: 4vw;
+    font-size: 22px;
   }
 }
