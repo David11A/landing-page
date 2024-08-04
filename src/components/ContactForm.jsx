@@ -28,19 +28,19 @@ const ContactForm = () => {
             <Space  >
               <PhoneOutlined className="contact-icon" />
               <Text strong className="contact-label">Teléfono:</Text>
-              <Text className="contact-text">(+504) 0000-0000</Text>
+              <Text className="contact-text">(+504) 9846-6995</Text>
             </Space>
             <Space>
               <MailOutlined className="contact-icon" />
               <Text strong className="contact-label">Email:</Text>
-              <Text className="contact-text">correo@gmail.com</Text>
+              <Text className="contact-text">danyaleman53@gmail.com</Text>
             </Space>
             <Space align="start">
               <EnvironmentOutlined className="contact-icon" />
               <div>
                 <Text strong className="contact-label">Dirección:</Text>
                 <br />
-                <Text className="contact-text">Centro Comercial Paseo, Tegucigalpa 12101, Honduras</Text>
+                <Text className="contact-text">Carrizal #1, Sector 1, Casa #24 Tegucigalpa,Honduras</Text>
               </div>
             </Space>
             <Space align="start">
@@ -66,7 +66,7 @@ const ContactForm = () => {
         <Col xs={22} md={10}>
           <div className="contenedor-mapa" >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5529674308875!2d-87.2265163!3d14.0453955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fac9f7e8f9b7d%3A0x12db78c5d25d3dd8!2sCentro%20Comercial%20Paseo%2C%20Tegucigalpa%2012101%2C%20Honduras!5e0!3m2!1sen!2sus!4v1685562012345!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d967.363682403894!2d-87.23533547199013!3d14.109334574109088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2shn!4v1722736409842!5m2!1ses-419!2shn"
               width="100%"
               height="100%"
               style={{ border: 0 }}
