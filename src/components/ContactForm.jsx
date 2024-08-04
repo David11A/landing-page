@@ -7,7 +7,7 @@ const { Title, Text } = Typography;
 
 const ContactForm = () => {
   return (
-    <div style={{marginTop:"60px", marginBottom:"60px"}}>
+    <div id='contacto' style={{marginTop:"60px", marginBottom:"60px"}}>
       <Row justify="center">
         {/* Sección de información de contacto */}
         <Col xs={22} md={10}>

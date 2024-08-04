@@ -66,13 +66,7 @@ const Menu1 = () => {
             <li><a href="#inicio" onClick={cerrarCajon}>Inicio</a></li>
             <li><a href="#quienes-somos" onClick={cerrarCajon}>Quiénes Somos</a></li>
             <li><a href="#servicios" onClick={cerrarCajon}>Servicios</a></li>
-            <li className="submenu">
-              <a href="#proyectos">Proyectos</a>
-              <ul className="elementos-submenu">
-                <li><a href="#destacados" onClick={cerrarCajon}>Destacados</a></li>
-                <li><a href="#accesorios" onClick={cerrarCajon}>Accesorios</a></li>
-              </ul>
-            </li>
+            <li><a href="#trabajos" onClick={cerrarCajon}>Referencias</a></li>
             <li><a href="#contacto" onClick={cerrarCajon}>Contacto</a></li>
           </ul>
           <button className="boton-menu" onClick={mostrarCajon}>
@@ -93,26 +87,14 @@ const Menu1 = () => {
                   Inicio
                 </a>
               </li>
-              <li className="submenu">
-                <a href="#proyectos" onClick={cerrarCajon}>
-                  Proyectos
-                </a>
-                <ul className="elementos-submenu">
-                  <li>
-                    <a href="#destacados" onClick={cerrarCajon}>
-                      Destacados
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#accesorios" onClick={cerrarCajon}>
-                      Accesorios
-                    </a>
-                  </li>
-                </ul>
-              </li>
               <li>
                 <a href="#quienes-somos" onClick={cerrarCajon}>
                   Quiénes Somos
+                </a>
+              </li>
+              <li>
+                <a href="#trabajos" onClick={cerrarCajon}>
+                  Referencias
                 </a>
               </li>
               <li>

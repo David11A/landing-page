@@ -8,7 +8,7 @@ const CarouselComponent = () => {
       {/* Sección del banner para PC */}
       <div className="pc-banner">
         <Carousel className="custom-carousel">
-          <div>
+          <div id='inicio'>
             <img src="/banner.png" className="carousel-content" alt="PC Banner" />
             <div className="carousel-text">
               {/* Título principal */}
@@ -16,7 +16,7 @@ const CarouselComponent = () => {
               {/* Subtítulo */}
               <h2 className="carousel-subtitle">DANY</h2>
               {/* Descripción */}
-              <p className="carousel-description">Mantenimiento | Restauraciones | Enderezamiento</p>
+              <p className="carousel-description">Mantenimiento | Restauraciones | Diagnosticos</p>
              
 
                {/* Sección de redes sociales */}

@@ -88,7 +88,7 @@ const CardServicios = () => {
   return (
     
     <Content className="seccion-personalizada">
-      <div className="contenedor-titulo" style={{ marginBottom: "60px" }}>
+      <div id='servicios' className="contenedor-titulo" style={{ marginBottom: "60px" }}>
         <div className="contenedor-flechas">
           <div className="flecha-izquierda">&#187;</div>
           <div className="flecha-derecha">&#187;</div>

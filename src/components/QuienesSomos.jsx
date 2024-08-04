@@ -19,21 +19,21 @@ const QuienesSomos = () => {
   };
 
   return (
-    <section id="quienes-somos" className="contenedor">
-<div className="marcas-carousel">
-  <div className="marcas-track">
-    {[...Array(2)].map((_, index) => (
-      <div key={index} className="marcas-slide">
-        <img src="/marca1.png" alt="Marca 1" />/ 
-        <img src="/marca2.png" alt="Marca 2" />/ 
-        <img src="/marca3.png" alt="Marca 3" />/ 
-        <img src="/marca4.png" alt="Marca 4" />/ 
-        <img src="/marca5.png" alt="Marca 5" />/ 
+    <section className="contenedor">
+      <div className="marcas-carousel">
+        <div className="marcas-track">
+          {[...Array(2)].map((_, index) => (
+            <div key={index} className="marcas-slide">
+              <img src="/marca1.png" alt="Marca 1" />/ 
+              <img src="/marca2.png" alt="Marca 2" />/ 
+              <img src="/marca3.png" alt="Marca 3" />/ 
+              <img src="/marca4.png" alt="Marca 4" />/ 
+              <img src="/marca5.png" alt="Marca 5" />/ 
+            </div>
+          ))}
+        </div>
       </div>
-    ))}
-  </div>
-</div>
-      <div className="seccion-personalizada">
+      <div id="quienes-somos" className="seccion-personalizada">
         <Row align="middle" justify="center">
           <Col xs={24} md={12} className="columna-texto-personalizada">
             <div className="contenedor-texto-personalizado">

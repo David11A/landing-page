@@ -33,7 +33,7 @@ function Proyectos() {
 
   return (
 
-      <div className="proyectos">
+      <div id='trabajos' className="proyectos">
             <div className="seccion-personalizada">
         <div className="contenedor-titulo">
           <div className="contenedor-flechas" style={{marginBottom:"80px"}}>
