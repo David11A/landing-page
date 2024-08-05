@@ -1,15 +1,65 @@
-/* Contenedor principal del carrusel */
+.marcas-track {
+  margin-top: 13%; /* Aumenta el margen superior para desplazar el carrusel de marcas hacia abajo */
+  display: flex;
+  width: 500%;
+  animation: scroll 40s linear infinite;
+}
+
+
+
+
+/* Resto de estilos */
+.marcas-slide {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.marcas-slide img {
+  height: 50px;
+  object-fit: contain;
+  max-width: 18%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marcas-track {
+    animation: scroll 20s linear infinite;
+  }
+  .marcas-carousel {
+    margin-top: 10px;
+  }
+  .marcas-slide img {
+    height: 30px;
+    max-width: 15%;
+  }
+}
+
+@media (max-width: 480px) {
+  .marcas-slide img {
+    max-width: 20%;
+    height: auto;
+  }
+}
+/* Estilos del banner */
 .carousel-container {
   position: relative;
   margin-top: 180px;
 }
 
-/* Estilos para los banners de PC y móvil */
 .pc-banner, .mobile-banner {
   display: none;
 }
 
-/* Estilos para el contenido del carrusel */
 .carousel-content {
   width: 100%;
   height: auto;
@@ -17,7 +67,6 @@
   object-fit: cover;
 }
 
-/* Estilos para el texto del carrusel */
 .carousel-text {
   position: absolute;
   top: 50%;
@@ -30,7 +79,6 @@
   padding: 10px;
 }
 
-/* Estilos para el título del carrusel */
 .carousel-title {
   font-family: 'Arial', sans-serif;
   font-size: 4vw;
@@ -42,7 +90,6 @@
   line-height: 1;
 }
 
-/* Estilos para el subtítulo del carrusel */
 .carousel-subtitle {
   font-family: 'Arial', sans-serif;
   font-size: 11vw;
@@ -54,7 +101,6 @@
   line-height: 1;
 }
 
-/* Estilos para la descripción del carrusel */
 .carousel-description {
   font-family: 'Arial', sans-serif;
   font-size: 1.8vw;
@@ -63,7 +109,6 @@
   margin-bottom: 20px;
 }
 
-/* Estilos para los iconos de redes sociales */
 .social-media-icons {
   display: flex;
   margin-left: 25%;
@@ -95,41 +140,32 @@
   color: #e60707;
 }
 
-/* Media queries para responsividad */
-@media (min-width: 769px) {
+@media (min-width: 1004px) {
   .pc-banner {
     display: block;
   }
-
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1003px) {
   .mobile-banner {
     display: block;
   }
-  .social-media-icons  {
+  .social-media-icons {
     margin-left: 0%;
   }
-
-  
   .carousel-title {
     font-size: 6vw;
   }
-  
   .carousel-subtitle {
     font-size: 11vw;
   }
-  
   .carousel-description {
     font-size: 3.5vw;
   }
-  
   .social-media-icons a {
     width: 40px;
     height: 40px;
-
   }
-  
   .custom-icon {
     font-size: 20px;
   }
@@ -139,49 +175,36 @@
   .carousel-title {
     font-size: 7vw;
   }
-  
   .carousel-subtitle {
     font-size: 11vw;
   }
-  
   .carousel-description {
     font-size: 4vw;
   }
-  
   .social-media-icons a {
     width: 35px;
     height: 35px;
   }
-  
   .custom-icon {
     font-size: 18px;
   }
 }
 
-/* Ajuste específico para pantallas medianas */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .carousel-container {
-    margin-top: 100px;
-  }
-  
+@media (min-width: 1200px) {
   .carousel-title {
-    font-size: 5vw;
+    font-size: 3vw;
   }
-  
   .carousel-subtitle {
-    font-size: 11vw;
+    font-size: 8vw;
   }
-  
   .carousel-description {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
-  
   .social-media-icons a {
-    width: 45px;
-    height: 45px;
+    width: 70px;
+    height: 70px;
   }
-  
   .custom-icon {
-    font-size: 22px;
+    font-size: 38px;
   }
 }

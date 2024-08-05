@@ -31,11 +31,24 @@ const CarouselComponent = () => {
                 <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
                   <WhatsAppOutlined className="custom-icon" />
                 </a>
+                
               </div>
-            </div>
-          </div>
-          
+                <div className="marcas-track">
+                  {[...Array(2)].map((_, index) => (
+                    <div key={index} className="marcas-slide">
+                      <img src="/marca1.png" alt="Marca 1" />/
+                      <img src="/marca2.png" alt="Marca 2" />/
+                      <img src="/marca3.png" alt="Marca 3" />/
+                      <img src="/marca4.png" alt="Marca 4" />/
+                      <img src="/marca5.png" alt="Marca 5" />/
+                    </div>
+                  ))}
+                </div>           
+            </div>  
+                    
+          </div>      
         </Carousel>
+        
         
       </div>
 
@@ -63,6 +76,17 @@ const CarouselComponent = () => {
                   <WhatsAppOutlined className="custom-icon" />
                 </a>
               </div>
+              <div className="marcas-track">
+                  {[...Array(2)].map((_, index) => (
+                    <div key={index} className="marcas-slide">
+                      <img src="/marca1.png" alt="Marca 1" />/
+                      <img src="/marca2.png" alt="Marca 2" />/
+                      <img src="/marca3.png" alt="Marca 3" />/
+                      <img src="/marca4.png" alt="Marca 4" />/
+                      <img src="/marca5.png" alt="Marca 5" />/
+                    </div>
+                  ))}
+                </div>    
             </div>
           </div>
         </Carousel>
