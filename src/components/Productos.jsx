@@ -33,10 +33,10 @@ function Proyectos() {
 
   return (
 
-      <div id='trabajos' className="proyectos">
-            <div className="seccion-personalizada">
+    <div id='trabajos' className="proyectos">
+      <div className="seccion-personalizada">
         <div className="contenedor-titulo">
-          <div className="contenedor-flechas" style={{marginBottom:"80px"}}>
+          <div className="contenedor-flechas" style={{ marginBottom: "80px" }}>
             <div className="flecha-izquierda">&#187;</div>
             <div className="flecha-derecha">&#187;</div>
             <h2 className="titulo-principal">
@@ -51,7 +51,7 @@ function Proyectos() {
           <div className="proyectos-info">
             <h2>{selectedProyecto.title}</h2>
             <p className="descripcion-personalizada">{selectedProyecto.description}</p>
-            
+
           </div>
           <div className="proyectos-thumbnails">
             {proyectosData.map(proyecto => (

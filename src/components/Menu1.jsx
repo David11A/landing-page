@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import { MenuOutlined, DownOutlined } from '@ant-design/icons';
+import { MenuOutlined } from '@ant-design/icons';
 import './Menu1.css';
 
 const Menu1 = () => {
   const [visible, setVisible] = useState(false);
-  const [mostrarEncabezado, setMostrarEncabezado] = useState(true);
-  const [ultimoScrollY, setUltimoScrollY] = useState(0);
+  const [seccionActiva, setSeccionActiva] = useState('');
 
   const mostrarCajon = () => {
     setVisible(true);
@@ -14,24 +13,6 @@ const Menu1 = () => {
   const cerrarCajon = () => {
     setVisible(false);
   };
-
-  const controlarEncabezado = () => {
-    if (window.scrollY > ultimoScrollY) {
-      // desplazamiento hacia abajo
-      setMostrarEncabezado(false);
-    } else {
-      // desplazamiento hacia arriba
-      setMostrarEncabezado(true);
-    }
-    setUltimoScrollY(window.scrollY);
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', controlarEncabezado);
-    return () => {
-      window.removeEventListener('scroll', controlarEncabezado);
-    };
-  }, [ultimoScrollY]);
 
   useEffect(() => {
     const manejarDesplazamiento = () => {
@@ -51,29 +32,52 @@ const Menu1 = () => {
     };
   }, [visible]);
 
+  useEffect(() => {
+    const secciones = document.querySelectorAll('section');
+    const opciones = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.6
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setSeccionActiva(entry.target.id);
+        }
+      });
+    }, opciones);
+
+    secciones.forEach(seccion => {
+      observer.observe(seccion);
+    });
+
+    return () => {
+      secciones.forEach(seccion => {
+        observer.unobserve(seccion);
+      });
+    };
+  }, []);
+
   return (
     <>
-      {/* Sección del encabezado */}
-      <header className={`encabezado-personalizado ${mostrarEncabezado ? '' : 'encabezado-oculto'}`}>
-        {/* Sección del logo */}
+      <header className="encabezado-personalizado">
         <div className="logo">
           <img src="logo.png" alt="Logo" />
           <span className="texto-logo">TALLER DE MOTO DANY</span>
         </div>
-        {/* Sección del menú */}
         <nav className="seccion-menu">
           <ul className="menu-escritorio">
-            <li><a href="#inicio" onClick={cerrarCajon}>Inicio</a></li>
-            <li><a href="#quienes-somos" onClick={cerrarCajon}>Quiénes Somos</a></li>
-            <li><a href="#servicios" onClick={cerrarCajon}>Servicios</a></li>
-            <li><a href="#trabajos" onClick={cerrarCajon}>Referencias</a></li>
-            <li><a href="#contacto" onClick={cerrarCajon}>Contacto</a></li>
+            <li><a href="#inicio" className={seccionActiva === 'inicio' ? 'activo' : ''} onClick={cerrarCajon}>Inicio</a></li>
+            <li><a href="#quienes-somos" className={seccionActiva === 'quienes-somos' ? 'activo' : ''} onClick={cerrarCajon}>Quiénes Somos</a></li>
+            <li><a href="#servicios" className={seccionActiva === 'servicios' ? 'activo' : ''} onClick={cerrarCajon}>Servicios</a></li>
+            <li><a href="#trabajos" className={seccionActiva === 'trabajos' ? 'activo' : ''} onClick={cerrarCajon}>Referencias</a></li>
+            <li><a href="#contacto" className={seccionActiva === 'contacto' ? 'activo' : ''} onClick={cerrarCajon}>Contacto</a></li>
           </ul>
           <button className="boton-menu" onClick={mostrarCajon}>
             <MenuOutlined />
           </button>
         </nav>
-        {/* Sección del cajón */}
         {visible && (
           <div className="cajon">
             <div className="cabecera-cajon">
@@ -82,26 +86,11 @@ const Menu1 = () => {
               </button>
             </div>
             <ul className="menu-cajon">
-              <li>
-                <a href="#inicio" onClick={cerrarCajon}>
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a href="#quienes-somos" onClick={cerrarCajon}>
-                  Quiénes Somos
-                </a>
-              </li>
-              <li>
-                <a href="#trabajos" onClick={cerrarCajon}>
-                  Referencias
-                </a>
-              </li>
-              <li>
-                <a href="#contacto" onClick={cerrarCajon}>
-                  Contacto
-                </a>
-              </li>
+              <li><a href="#inicio" className={seccionActiva === 'inicio' ? 'activo' : ''} onClick={cerrarCajon}>Inicio</a></li>
+              <hr /><li><a href="#quienes-somos" className={seccionActiva === 'quienes-somos' ? 'activo' : ''} onClick={cerrarCajon}>Quiénes Somos</a></li>
+              <hr /><li><a href="#servicios" className={seccionActiva === 'servicios' ? 'activo' : ''} onClick={cerrarCajon}>Servicios</a></li>
+              <hr /><li><a href="#trabajos" className={seccionActiva === 'trabajos' ? 'activo' : ''} onClick={cerrarCajon}>Referencias</a></li>
+              <hr /><li><a href="#contacto" className={seccionActiva === 'contacto' ? 'activo' : ''} onClick={cerrarCajon}>Contacto</a></li> 
             </ul>
           </div>
         )}
@@ -111,3 +100,4 @@ const Menu1 = () => {
 };
 
 export default Menu1;
+

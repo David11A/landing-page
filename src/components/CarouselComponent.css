@@ -63,13 +63,13 @@
 .carousel-content {
   width: 100%;
   height: auto;
-  max-height: calc(100vh - 80px);
+  max-height: calc(100vh - 0px);
   object-fit: cover;
 }
 
 .carousel-text {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 2%;
   transform: translate(0, -50%);
   color: white;
