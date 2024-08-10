@@ -164,3 +164,19 @@ body {
     border-bottom: 2px solid #fc373b;
   }
 }
+
+
+
+
+
+
+
+
+
+@media (max-width: 667px) {
+
+  .texto-logo {
+    font-size: 23px;
+  }
+}
+
