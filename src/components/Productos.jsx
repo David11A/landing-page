@@ -12,19 +12,19 @@ const proyectosData = [
     id: 2,
     title: "Reparación de Motor",
     description: "Especialistas en la reparación y ajuste de motores, garantizando un rendimiento mejorado y una experiencia de conducción más suave.",
-    image: "/imgQ4.png"
+    image: "/proyecto2.png"
   },
   {
     id: 3,
     title: "Pintura y Estética",
     description: "Proyecto de personalización de motocicletas con servicios de pintura y estética, creando diseños únicos y llamativos.",
-    image: "/pintura.png"
+    image: "/proyecto3.png"
   },
   {
     id: 4,
     title: "Accesorios y Equipamiento",
     description: "Instalación de accesorios y equipamiento para motocicletas, mejorando la funcionalidad y el estilo del vehículo.",
-    image: "/accesorios.png"
+    image: "/proyecto4.png"
   }
 ];
 
