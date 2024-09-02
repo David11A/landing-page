@@ -7,13 +7,6 @@ const { Paragraph } = Typography;
 
 const QuienesSomos = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const images = [
-    "logo2.png",
-    "imgQ2.png",
-    "imgQ3.png",
-    "imgQ4.png",
-    "imgQ5.png",
-  ];
   const handleSlideClick = (index) => {
     setCurrentSlide(index);
   };
@@ -112,7 +105,7 @@ const QuienesSomos = () => {
 
           <Col xs={24} md={12} className="columna-imagen-personalizada">
             <img
-              src={images[0]}
+              src='https://firebasestorage.googleapis.com/v0/b/taller-dany.appspot.com/o/logos-taller-de-motos-dany%2Flogo2.png?alt=media&token=968b767b-040e-4e7b-a37b-818f96e35320'
               alt="About Us"
               className="imagen-personalizada"
             />
