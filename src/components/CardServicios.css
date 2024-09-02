@@ -282,3 +282,9 @@
     padding: 0 3px;
   }
 }
+
+@media(max-width:361px){
+  .card-details{
+    height: 62%;
+  }
+}

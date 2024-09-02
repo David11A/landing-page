@@ -98,7 +98,7 @@
 
 /* Estilos de la descripción */
 .descripcion-personalizada {
-  text-align: justify;
+  text-align: left;
   color: #F4F4F4;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
@@ -158,11 +158,17 @@
 }
 
 .parrafo-tarjeta-personalizada {
-  text-align: justify;
+  text-align: left;
   color: #F4F4F4;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   line-height: 1.6;
   margin: 0;
   margin-bottom: 0;
+}
+
+@media(max-width:361px){
+  .boton-personalizado {
+    padding: 10px 10px;
+  }
 }

@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+/* eslint-disable react/prop-types */
+import  { useState, useEffect, useRef } from 'react';
 import { Col, Row } from 'antd';
 import { Content } from 'antd/es/layout/layout';
 import './CardServicios.css';
-import { FaCoins, FaWrench } from 'react-icons/fa';
-import Paragraph from 'antd/es/typography/Paragraph';
+import  'react-icons/fa';
+import  'antd/es/typography/Paragraph';
 
 const CardServicios = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,31 +13,27 @@ const CardServicios = () => {
 
   const services = [
     {
-      imagencard: "/imgMv2.png",
+      imagencard: "https://firebasestorage.googleapis.com/v0/b/taller-dany.appspot.com/o/img-cards-portada%2FimgMantenimiento.png?alt=media&token=ad23b6e6-0657-450c-91b7-21ba98c8cc39",
       title: "Mantenimiento",
       description: "Ofrecemos servicios completos de mantenimiento preventivo para mantener tu motocicleta en óptimas condiciones. Desde cambios de aceite hasta ajustes de frenos, nos aseguramos de que tu moto esté siempre lista para rodar.",
-      images: ["/imgLarge1.png", "/imgSmall1_1.png", "/imgSmall1_2.png", "/imgSmall1_3.png"],
       prices: ["Desde L.495"]
     },
     {
-      imagencard: "/imgMv3.png",
+      imagencard: "https://firebasestorage.googleapis.com/v0/b/taller-dany.appspot.com/o/img-cards-portada%2FimgRestauraciones.png?alt=media&token=689dbd96-a051-4110-82f5-c4afaef33495",
       title: "Restauraciones",
       description: "Especialistas en devolverle la vida a motocicletas clásicas o dañadas. Nuestro equipo realiza restauraciones detalladas para que tu moto recupere su brillo original y funcione como nueva.",
-      images: ["/imgLarge2.png", "/imgSmall2_1.png", "/imgSmall2_2.png", "/imgSmall2_3.png"],
       prices: ["Precio varia por modelo"]
     },
     {
-      imagencard: "/imgMv4.png",
+      imagencard: "https://firebasestorage.googleapis.com/v0/b/taller-dany.appspot.com/o/img-cards-portada%2FimgDiagnosticos.png?alt=media&token=f90d16c3-ceb3-4837-bb29-7795ff7929f9",
       title: "Diagnosticos",
       description: "Identificamos con precisión cualquier problema mecánico o eléctrico en tu motocicleta utilizando herramientas de diagnóstico avanzadas, garantizando una reparación eficiente y efectiva.",
-      images: ["/imgLarge3.png", "/imgSmall3_1.png", "/imgSmall3_2.png", "/imgSmall3_3.png"],
       prices: ["Desde L.199"]
     },
     {
       imagencard: "/imgMv5.png",
       title: "Sistema Electrico",
       description: "Solucionamos problemas en el sistema eléctrico de tu moto, desde fallos en el encendido hasta problemas de iluminación, asegurando que cada componente funcione correctamente.",
-      images: ["/moto2D.jpg", "/moto3D.jpg", "/moto2D.jpg", "/moto2D.jpg"],
       prices: ["Precio varia por falla"]
     }
   ];

@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
-import { Row, Col, Typography } from 'antd';
-import './QuienesSomos.css';
+/* eslint-disable react/no-unknown-property */
+import { useState } from "react";
+import { Row, Col, Typography } from "antd";
+import "./QuienesSomos.css";
 
-const { Title, Paragraph } = Typography;
+const { Paragraph } = Typography;
 
 const QuienesSomos = () => {
-  const [currentImage, setCurrentImage] = useState(0);
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const images = ['logo2.png', 'imgQ2.png', 'imgQ3.png', 'imgQ4.png', 'imgQ5.png'];
-
-  const handleImageClick = (index) => {
-    setCurrentImage(index);
-  };
-
+  const images = [
+    "logo2.png",
+    "imgQ2.png",
+    "imgQ3.png",
+    "imgQ4.png",
+    "imgQ5.png",
+  ];
   const handleSlideClick = (index) => {
     setCurrentSlide(index);
   };
@@ -35,22 +35,33 @@ const QuienesSomos = () => {
               </div>
 
               <Paragraph className="descripcion-personalizada">
-              Somos un taller dedicada a la reparación y mantenimiento de motocicletas. Con más de 5 años de experiencia, nuestro taller es un referente en la comunidad, no solo por la calidad de nuestros servicios, sino también por nuestra dedicación y pasión por las motocicletas. </Paragraph>
+                Somos un taller dedicada a la reparación y mantenimiento de
+                motocicletas. Con más de 5 años de experiencia, nuestro taller
+                es un referente en la comunidad, no solo por la calidad de
+                nuestros servicios, sino también por nuestra dedicación y pasión
+                por las motocicletas.{" "}
+              </Paragraph>
               <div className="contenedor-botones-personalizado">
                 <button
-                  className={`boton-personalizado ${currentSlide === 0 ? 'activo' : ''}`}
+                  className={`boton-personalizado ${
+                    currentSlide === 0 ? "activo" : ""
+                  }`}
                   onClick={() => handleSlideClick(0)}
                 >
                   Misión
                 </button>
                 <button
-                  className={`boton-personalizado ${currentSlide === 1 ? 'activo' : ''}`}
+                  className={`boton-personalizado ${
+                    currentSlide === 1 ? "activo" : ""
+                  }`}
                   onClick={() => handleSlideClick(1)}
                 >
                   Visión
                 </button>
                 <button
-                  className={`boton-personalizado ${currentSlide === 2 ? 'activo' : ''}`}
+                  className={`boton-personalizado ${
+                    currentSlide === 2 ? "activo" : ""
+                  }`}
                   onClick={() => handleSlideClick(2)}
                 >
                   Valores
@@ -59,25 +70,39 @@ const QuienesSomos = () => {
               <div className="contenedor-tarjetas-personalizado">
                 {currentSlide === 0 && (
                   <div className="tarjeta-personalizada">
-                    <h2 level={5} className="titulo-tarjeta-personalizada">Misión</h2>
+                    <h2 level={5} className="titulo-tarjeta-personalizada">
+                      Misión
+                    </h2>
                     <Paragraph className="parrafo-tarjeta-personalizada">
-                      Nuestra misión es garantizar la seguridad y el rendimiento óptimo de cada motocicleta, proporcionando un servicio excepcional y atención personalizada a nuestros clientes.
+                      Nuestra misión es garantizar la seguridad y el rendimiento
+                      óptimo de cada motocicleta, proporcionando un servicio
+                      excepcional y atención personalizada a nuestros clientes.
                     </Paragraph>
                   </div>
                 )}
                 {currentSlide === 1 && (
                   <div className="tarjeta-personalizada">
-                    <h2 level={5} className="titulo-tarjeta-personalizada">Visión</h2>
+                    <h2 level={5} className="titulo-tarjeta-personalizada">
+                      Visión
+                    </h2>
                     <Paragraph className="parrafo-tarjeta-personalizada">
-                    Ser el taller de motocicletas líder en la región, reconocido por la calidad de nuestros servicios, la innovación en nuestras soluciones y la fidelidad de nuestros clientes.
+                      Ser el taller de motocicletas líder en la región,
+                      reconocido por la calidad de nuestros servicios, la
+                      innovación en nuestras soluciones y la fidelidad de
+                      nuestros clientes.
                     </Paragraph>
                   </div>
                 )}
                 {currentSlide === 2 && (
                   <div className="tarjeta-personalizada">
-                    <h2 level={5} className="titulo-tarjeta-personalizada">Valores</h2>
+                    <h2 level={5} className="titulo-tarjeta-personalizada">
+                      Valores
+                    </h2>
                     <Paragraph className="parrafo-tarjeta-personalizada">
-                    Compromiso, calidad, confianza e innovación refleja nuestra esencia y enfoque de ofrecer servicios de alta calidad mientras se mantiene una relación cercana con la comunidad.
+                      Compromiso, calidad, confianza e innovación refleja
+                      nuestra esencia y enfoque de ofrecer servicios de alta
+                      calidad mientras se mantiene una relación cercana con la
+                      comunidad.
                     </Paragraph>
                   </div>
                 )}
@@ -86,8 +111,11 @@ const QuienesSomos = () => {
           </Col>
 
           <Col xs={24} md={12} className="columna-imagen-personalizada">
-            <img src={images[currentImage]} alt="About Us" className="imagen-personalizada" />
-            
+            <img
+              src={images[0]}
+              alt="About Us"
+              className="imagen-personalizada"
+            />
           </Col>
         </Row>
       </div>

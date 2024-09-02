@@ -63,7 +63,7 @@ const Menu1 = () => {
     <>
       <header className="encabezado-personalizado">
         <div className="logo">
-          <img src="logo.png" alt="Logo" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/taller-dany.appspot.com/o/logos-taller-de-motos-dany%2Flogo2.png?alt=media&token=968b767b-040e-4e7b-a37b-818f96e35320" alt="Logo" />
           <span className="texto-logo">TALLER DE MOTO DANY</span>
         </div>
         <nav className="seccion-menu">
