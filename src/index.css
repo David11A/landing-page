@@ -18,3 +18,8 @@ body{
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
+@media(max-width:421px){
+  .ant-space-gap-col-small {
+    column-gap: 0!important;
+}
+}
