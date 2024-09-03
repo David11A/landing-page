@@ -14,13 +14,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   gap: 20px;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   margin-bottom: 20px;
 }
 
 .proyectos-main-image img {
-  width: 100%;
+  width: 65%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);

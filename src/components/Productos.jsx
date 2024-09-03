@@ -5,8 +5,8 @@ const proyectosData = [
   {
     id: 1,
     title: "Mantenimiento Preventivo",
-    description: "Proyecto enfocado en el mantenimiento preventivo de motocicletas, asegurando un óptimo funcionamiento y alargando la vida útil del vehículo.",
-    image: "/proyecto1.png"
+    description: "Dedicados al mantenimiento integral de motocicletas, abarcando revisiones preventivas y ajustes para asegurar un rendimiento óptimo y prolongar la vida útil de tu motocicleta.",
+    image: "https://firebasestorage.googleapis.com/v0/b/taller-dany.appspot.com/o/img-trabajos%2Fcalibracion-valvulas.jpg?alt=media&token=54538a77-1a46-431a-9c39-2f987a27440f"
   },
   {
     id: 2,
@@ -17,14 +17,14 @@ const proyectosData = [
   {
     id: 3,
     title: "Pintura y Estética",
-    description: "Proyecto de personalización de motocicletas con servicios de pintura y estética, creando diseños únicos y llamativos.",
+    description: "Centrado en la personalización estética de motocicletas, con servicios de pintura y diseño que transforman cada vehículo en una obra de arte única.",
     image: "/proyecto3.png"
   },
   {
     id: 4,
     title: "Accesorios y Equipamiento",
-    description: "Instalación de accesorios y equipamiento para motocicletas, mejorando la funcionalidad y el estilo del vehículo.",
-    image: "/proyecto4.png"
+    description: "Instalación de accesorios y equipamiento avanzado para motocicletas, potenciando tanto la funcionalidad como el estilo del vehículo para un desempeño superior.",
+    image: "https://firebasestorage.googleapis.com/v0/b/taller-dany.appspot.com/o/img-trabajos%2Faccesorios-fz.jpg?alt=media&token=ea90d226-d2ff-4eef-884b-903bbc77828b"
   }
 ];
 
@@ -36,7 +36,7 @@ function Proyectos() {
     <div id='trabajos' className="proyectos">
       <div className="seccion-personalizada">
         <div className="contenedor-titulo">
-          <div className="contenedor-flechas" style={{ marginBottom: "80px" }}>
+          <div className="contenedor-flechas" >
             <div className="flecha-izquierda">&#187;</div>
             <div className="flecha-derecha">&#187;</div>
             <h2 className="titulo-principal">
