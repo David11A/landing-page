@@ -57,7 +57,7 @@ export default function Footer1() {
             </Title>
             <Space direction="vertical">
               <Link
-                href="/servicios"
+                href="#servicios"
                 style={{
                   color: "rgba(255, 255, 255, 0.65)",
                   fontFamily: "'Roboto', sans-serif",
@@ -67,7 +67,7 @@ export default function Footer1() {
                 Servicios
               </Link>
               <Link
-                href="/nosotros"
+                href="#quienes-somos"
                 style={{
                   color: "rgba(255, 255, 255, 0.65)",
                   fontFamily: "'Roboto', sans-serif",
@@ -77,7 +77,7 @@ export default function Footer1() {
                 Quienes Somos
               </Link>
               <Link
-                href="/contacto"
+                href="#contacto"
                 style={{
                   color: "rgba(255, 255, 255, 0.65)",
                   fontFamily: "'Roboto', sans-serif",

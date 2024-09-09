@@ -58,27 +58,29 @@ const CarouselComponent = ({ onImageLoad }) => {
 
                   {/* Sección de redes sociales */}
                   <div className="social-media-icons">
+                  <a
+                    href="mailto:danyaleman53@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GoogleOutlined
+                      className="custom-icon"
+                    />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/dany_aleman_11/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <InstagramOutlined className="custom-icon" />
+                  </a>
                     <a
-                      href="https://www.google.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GoogleOutlined className="custom-icon" />
-                    </a>
-                    <a
-                      href="https://www.instagram.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <InstagramOutlined className="custom-icon" />
-                    </a>
-                    <a
-                      href="https://www.whatsapp.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <WhatsAppOutlined className="custom-icon" />
-                    </a>
+                    href="https://wa.me/+50498466995"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <WhatsAppOutlined className="custom-icon" />
+                  </a>
                   </div>
                   <div className="marcas-track">
                     {[...Array(2)].map((_, index) => (

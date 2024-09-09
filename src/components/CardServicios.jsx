@@ -31,7 +31,7 @@ const CardServicios = () => {
       prices: ["Desde L.199"]
     },
     {
-      imagencard: "/imgMv5.png",
+      imagencard: "https://firebasestorage.googleapis.com/v0/b/taller-dany.appspot.com/o/img-cards-portada%2FimgElectricidad.png?alt=media&token=e7c0eebb-8aec-484c-b45c-34dfec9bb49b",
       title: "Sistema Electrico",
       description: "Solucionamos problemas en el sistema eléctrico de tu moto, desde fallos en el encendido hasta problemas de iluminación, asegurando que cada componente funcione correctamente.",
       prices: ["Precio varia por falla"]
@@ -85,7 +85,7 @@ const CardServicios = () => {
   return (
     
     <Content className="seccion-personalizada">
-      <div id='servicios' className="contenedor-titulo" style={{ marginBottom: "60px" }}>
+      <div id='servicios' className="contenedor-titulo" style={{ marginBottom: "10px" }}>
         <div className="contenedor-flechas">
           <div className="flecha-izquierda">&#187;</div>
           <div className="flecha-derecha">&#187;</div>
