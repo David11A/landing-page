@@ -6,8 +6,11 @@ body {
 #inicio{
   scroll-margin-top: 10vh;
 }
-#servicios,  #contacto{
+#servicios {
   scroll-margin-top: 12vh;
+}
+#contacto{
+  scroll-margin-top: 15vh;
 }
 
 #quienes-somos, #trabajos{
